@@ -18,7 +18,12 @@ class ItemController extends Controller
 	}
 
 	public function store(Request $request) {
-		$item = Item::create($request->all());
+		//$item = new Item();
+		//$item = $request;
+		//$item->name = "Testy Guy"; //$request; ->$name = $request->input($name);
+		//$item->price = -1; // $request->$price;
+			
+		$item =  Item::create($request->all());
 
 		return response()->json($item, 201);
 	}
